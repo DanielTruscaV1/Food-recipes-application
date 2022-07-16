@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+//Import react
+import React from "react";
+//Import the "Style" CSS file
+import "./Style.css";
+//Import the "Header" component
+import Header from "./components/Header";
+//Import the "Search" component
+import Search from "./components/Search";
+//Import the "Main" component
+import Main from "./components/Main";
+//Import the "Footer" component
+import Footer from "./components/Footer";
 
+//Create the "App" component
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/*Return the "Header" component*/}
+      <Header/>
+      {/*Return the "Search" component*/}
+      <Search/>
+      {/*Return the "Main" component*/}
+      <Main/>
+      {/*Return the "Footer" component*/}
+      <Footer/>
+    </>
   );
 }
 
+//Export the "App" component
 export default App;
