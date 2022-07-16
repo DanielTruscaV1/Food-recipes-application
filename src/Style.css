@@ -6,6 +6,10 @@
     font-family: 'Roboto', sans-serif;
     margin:0px;
 }
+.dark-mode
+{
+    background-color:rgb(50, 50, 50);
+}
 .header
 {
     width:100%;
@@ -26,6 +30,17 @@
 {
     color:rgb(100, 100, 200);
     cursor:pointer;
+}
+.header button
+{
+    margin-top:20px;
+    cursor:pointer;
+    background-color:rgb(240, 240, 240);
+    border:1px solid black;
+}
+.header button:hover
+{
+    border:2px solid rgb(100, 100, 200);
 }
 .search input
 {
@@ -49,6 +64,7 @@
     border:none;
     color:white;
     background-color:rgb(100, 100, 200);
+    cursor:pointer;
 }
 .main
 {
@@ -60,6 +76,23 @@
     width:1200px;
     height:3px;
     border:1px solid rgb(50, 50, 50);
+}
+.card
+{
+    display:inline-block;
+    margin-left:5px;
+}
+.main img
+{
+    width:200px;
+    height:150px;
+    border-radius:20px;
+    margin:10px;
+    cursor:pointer
+}
+.main p
+{
+    margin:10px;
 }
 .footer
 {

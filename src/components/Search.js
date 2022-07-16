@@ -5,7 +5,7 @@ import React from 'react'
 export default function Search() {
   return (
     <div className="search">
-        <input type="text" placeholder="Search for something..."/>
+        <input type="text" placeholder="Search for something..." id="searchBar"/>
         <button><i className="fa fa-search"></i></button>
     </div>
   )
