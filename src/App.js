@@ -1,5 +1,5 @@
 //Import react
-import React from "react";
+import React, {useState} from "react";
 //Import the "Style" CSS file
 import "./Style.css";
 //Import the "Header" component
@@ -19,8 +19,6 @@ function App() {
       <Header/>
       {/*Return the "Search" component*/}
       <Search/>
-      {/*Return the "Main" component*/}
-      <Main/>
       {/*Return the "Footer" component*/}
       <Footer/>
     </>

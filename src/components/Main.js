@@ -8,21 +8,71 @@ import image4 from "../images/image4.jpg";
 import image5 from "../images/image5.jpg";
 
 //Create and export the "Main" function component
-export default function Main() {
-  const [image, setImage] = useState("");
-
-  //Make the API call
-  const APIkey = "3f0ecd1443624db880a149d438cf0841";
-  const call = async () => {
-    const API = await fetch("https://api.spoonacular.com/recipes/random?apiKey="+APIkey);
-    const data = await API.json();
-    console.log(data);
-    setImage(data.recipes[0].image);
-  }
+export default function Main(props) {
 
   return (
     <div className="main">
-      <h3 onClick={call}>Featured:</h3>
+      {
+        props.image1 !== ""?
+        <div className="container">
+          <h3>Searched:</h3>
+          <hr/>
+          <div className="card">
+            <img src={props.image1}/>
+            <p>
+              {
+                props.title1.length > 10?
+                props.title1:
+                props.title1
+              }
+            </p>
+          </div>
+         <div className="card">
+            <img src={props.image2}/>
+            <p>
+              {
+                props.title2.length > 10?
+                props.title2:
+                props.title2
+              }
+            </p>
+          </div>
+          <div className="card">
+            <img src={props.image3}/>
+            <p>
+              {
+                props.title3.length > 10?
+                props.title3:
+                props.title3
+              }
+            </p>
+          </div>
+          <div className="card">
+            <img src={props.image4}/>
+            <p>
+              {
+                props.title4.length > 10?
+                props.title4:
+                props.title4
+              }
+            </p>
+          </div>
+          <div className="card">
+            <img src={props.image5}/>
+            <p>
+              {
+                props.title5.length > 10?
+                props.title5:
+                props.title5
+              }
+            </p>
+          </div>
+        </div>
+        :
+        <>
+        </>
+      }
+      <h3>Featured:</h3>
       <hr/>
       <div className="card">
         <img src={image1}/>

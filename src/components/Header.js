@@ -26,7 +26,7 @@ export default function Header() {
     }
     else
     {
-      document.body.style.backgroundColor = "rgb(240, 240, 240)";
+      document.body.style.backgroundColor = "white";
       document.body.style.color = "black";
       document.getElementById("searchBar").style.backgroundColor = "rgb(50, 50, 50)";
       document.getElementById("footerId").style.backgroundColor = "rgb(50, 50, 50)";
