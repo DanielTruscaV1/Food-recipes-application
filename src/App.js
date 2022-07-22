@@ -6,8 +6,6 @@ import "./Style.css";
 import Header from "./components/Header";
 //Import the "Search" component
 import Search from "./components/Search";
-//Import the "Main" component
-import Main from "./components/Main";
 //Import the "Footer" component
 import Footer from "./components/Footer";
 

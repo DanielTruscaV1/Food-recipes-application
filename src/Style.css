@@ -112,3 +112,43 @@
     margin:20px;
     cursor:pointer;
 }
+.recipe
+{
+    margin-left:35%;
+}
+.recipe img
+{
+    width:400px;
+    height:350px;
+    border-radius:20px;
+    margin:10px;
+    cursor:pointer;
+}
+.recipe button
+{
+    width:auto;
+    margin-left:0px;
+    margin-top:5px;
+}
+.recipe h3
+{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.recipe span
+{
+    background-color:green;
+    color:white;
+    font-size:20px;
+}
+.recipe p
+{
+    max-width:35%;
+}
+.back
+{
+    display:block;
+    position:relative;
+    left:-500px;
+    top:-35px;
+}

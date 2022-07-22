@@ -18,7 +18,12 @@ export default function Main(props) {
           <h3>Searched:</h3>
           <hr/>
           <div className="card">
-            <img src={props.image1}/>
+            <img src={props.image1} onClick={() => {
+              props.setShouldBeShown(!props.shouldBeShown);
+              props.setImage(props.image1);
+              props.setTitle(props.title1);
+              props.setId(props.id1);
+              }}/>
             <p>
               {
                 props.title1.length > 10?
@@ -28,7 +33,12 @@ export default function Main(props) {
             </p>
           </div>
          <div className="card">
-            <img src={props.image2}/>
+            <img src={props.image2} onClick={() => {
+              props.setShouldBeShown(!props.shouldBeShown);
+              props.setImage(props.image2);
+              props.setTitle(props.title2);
+              props.setId(props.id2);
+              }}/>
             <p>
               {
                 props.title2.length > 10?
@@ -38,7 +48,12 @@ export default function Main(props) {
             </p>
           </div>
           <div className="card">
-            <img src={props.image3}/>
+            <img src={props.image3} onClick={() => {
+              props.setShouldBeShown(!props.shouldBeShown);
+              props.setImage(props.image3);
+              props.setTitle(props.title3);
+              props.setId(props.id3);
+              }}/>
             <p>
               {
                 props.title3.length > 10?
@@ -48,7 +63,12 @@ export default function Main(props) {
             </p>
           </div>
           <div className="card">
-            <img src={props.image4}/>
+            <img src={props.image4} onClick={() => {
+              props.setShouldBeShown(!props.shouldBeShown);
+              props.setImage(props.image4);
+              props.setTitle(props.title4);
+              props.setId(props.id4);
+              }}/>
             <p>
               {
                 props.title4.length > 10?
@@ -58,7 +78,12 @@ export default function Main(props) {
             </p>
           </div>
           <div className="card">
-            <img src={props.image5}/>
+            <img src={props.image5} onClick={() => {
+              props.setShouldBeShown(!props.shouldBeShown);
+              props.setImage(props.image5);
+              props.setTitle(props.title5);
+              props.setId(props.id5);
+              }}/>
             <p>
               {
                 props.title5.length > 10?
