@@ -9,6 +9,9 @@ const Recipe = (props) => {
   const [vegetarian, setVegetarian] = useState(false);
   const [score, setScore] = useState(false);
   const [instructions, setInstructions] = useState("");
+  var parser = new DOMParser();
+  var doc;
+
 
   //Make the API call
   const APIkey = "3f0ecd1443624db880a149d438cf0841";
@@ -23,6 +26,7 @@ const Recipe = (props) => {
     setVegetarian(data.vegetarian);
     setScore(data.healthScore);
     setInstructions(data.instructions);
+    doc = parser.parseFromString(data.instructions, 'text/html');
   }
 
   return (
@@ -30,7 +34,7 @@ const Recipe = (props) => {
       <button className="back">Go back</button>
       <img src={props.image} alt=""/>
       <h3>{props.title}</h3>
-      <button onClick={call}>Show informations</button>
+      <button onClick={call}>Show information</button>
       {
         showInformations?
         <>
@@ -51,7 +55,8 @@ const Recipe = (props) => {
             cuisines.map(element => <p>{element}</p>)
           }
           <h3>Instructions:</h3>
-          <p>{instructions}</p>
+          <div className="special" dangerouslySetInnerHTML={ { __html: instructions } }>
+          </div>
         </>:
         <>
         </>
