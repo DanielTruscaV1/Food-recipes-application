@@ -31,7 +31,7 @@ const Recipe = (props) => {
 
   return (
     <div className="recipe">
-      <button className="back">Go back</button>
+      <button className="back" onClick={() => {props.setShouldBeShown(!props.shouldBeShown)}}>Go back</button>
       <img src={props.image} alt=""/>
       <h3>{props.title}</h3>
       <button onClick={call}>Show information</button>
