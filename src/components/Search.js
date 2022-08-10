@@ -51,14 +51,43 @@ export default function Search() {
     setId5(data.results[4].id);
   }
 
+  const [showSignUp, setShowSignUp] = useState(false);
+  const goToSignUp = () => {
+    setShowSignUp(!showSignUp);
+  }
+
   return (
     <div className="search">
-        <input type="text" placeholder="Search for something..." id="searchBar" onChange={event => setText(event.target.value)}/>
-        <button onClick={call}><i className="fa fa-search"></i></button>
+        <button className="authentication" onClick={goToSignUp}>Sign-up</button>
+        <button className="authentication">Sign-in</button>
+        <br/>
         {
-          shouldBeShown?
-          <Main shouldBeShown={shouldBeShown} setShouldBeShown={setShouldBeShown} setImage={setImage} setTitle={setTitle} setId={setId} image1={image1} image2={image2} image3={image3} image4={image4} image5={image5} title1={title1} title2={title2} title3={title3} title4={title4} title5={title5} id1={id1} id2={id2} id3={id3} id4={id4} id5={id5}/>:
-          <Recipe shouldBeShown={shouldBeShown} setShouldBeShown={setShouldBeShown} image={image} title={title} id={id}/>
+        showSignUp?
+        <>
+          <h1 className="titleHeader">Sign-up today!</h1>
+          <div className="signUpContainer">
+            <p>Set your username:</p>
+            <br/>
+            <input type="text" className="signUpInput" placeholder="Username..."/>
+            <p>Set your password:</p>
+            <br/>
+            <input type="text" className="signUpInput" placeholder="Password..."/>
+            <p>Set your email:</p>
+            <br/>
+            <input type="text" className="signUpInput" placeholder="Email..."/>
+            <br/>
+            <button>Sign-up</button>
+          </div>
+        </>:
+        <>
+          <input type="text" placeholder="Search for something..." id="searchBar" onChange={event => setText(event.target.value)}/>
+          <button onClick={call}><i className="fa fa-search"></i></button>
+          {
+            shouldBeShown?
+            <Main shouldBeShown={shouldBeShown} setShouldBeShown={setShouldBeShown} setImage={setImage} setTitle={setTitle} setId={setId} image1={image1} image2={image2} image3={image3} image4={image4} image5={image5} title1={title1} title2={title2} title3={title3} title4={title4} title5={title5} id1={id1} id2={id2} id3={id3} id4={id4} id5={id5}/>:
+            <Recipe shouldBeShown={shouldBeShown} setShouldBeShown={setShouldBeShown} image={image} title={title} id={id}/>
+          }
+        </>
         }
     </div>
   )
