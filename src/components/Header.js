@@ -11,7 +11,8 @@ export default function Header() {
     {
       document.body.style.backgroundColor = "rgb(50, 50, 50)";
       document.body.style.color = "white";
-      document.getElementById("searchBar").style.backgroundColor = "white";
+      if(document.getElementById("searchBar").style.backgroundColor != "")
+        document.getElementById("searchBar").style.backgroundColor = "white";
       document.getElementById("title").style.color = "black";
       document.getElementById("icon").style.color = "black";
       document.getElementById("footerId").style.backgroundColor = "white";

@@ -196,3 +196,14 @@
     margin-left:40%;
     margin-top:30px;
 }
+.welcomeHeader
+{
+    text-align:center;
+    margin-left:-200px !important;
+}
+.welcomeImage
+{
+    width:33% !important;
+    height:300px !important;
+    margin-left:27% !important; 
+}

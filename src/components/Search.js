@@ -68,15 +68,15 @@ export default function Search() {
           <div className="signUpContainer">
             <p>Set your username:</p>
             <br/>
-            <input type="text" className="signUpInput" placeholder="Username..."/>
+            <input type="text" className="signUpInput" placeholder="Username..." required/>
             <p>Set your password:</p>
             <br/>
-            <input type="text" className="signUpInput" placeholder="Password..."/>
+            <input type="text" className="signUpInput" placeholder="Password..." required/>
             <p>Set your email:</p>
             <br/>
-            <input type="text" className="signUpInput" placeholder="Email..."/>
+            <input type="text" className="signUpInput" placeholder="Email..." required/>
             <br/>
-            <button>Sign-up</button>
+            <button onClick={() => alert("You have been signed up!")}>Sign-up</button>
           </div>
         </>:
         <>

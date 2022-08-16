@@ -6,12 +6,17 @@ import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
 import image4 from "../images/image4.jpg";
 import image5 from "../images/image5.jpg";
+import image1prime from "../images/image1.jfif";
 
 //Create and export the "Main" function component
 export default function Main(props) {
 
   return (
     <div className="main">
+      <div>
+        <h1 className="welcomeHeader">Welcome to Delicious.com!</h1>
+        <img className="welcomeImage" src={image1prime} alt=""/>
+      </div>
       {
         props.image1 !== ""?
         <div className="container">
